@@ -15,21 +15,26 @@ export default function SideNav({ activeHref }: SideNavProps) {
     const navigate = useNavigate();
 
     const sideNavItems: SideNavigationProps.Item[] = [
+        {
+            type: 'link',
+            text: 'Patients',
+            href: 'https://d13qy380vrp732.cloudfront.net/patients',
+            external: true
+        },
         // {
         //     type: 'link',
-        //     text: 'Patients',
-        //     href: 'https://d13qy380vrp732.cloudfront.net/patients',
-        //     external: true
+        //     text: 'Clinics',
+        //     href: '/clinics',
         // },
         { type: 'divider' },
         {
             type: 'link',
-            text: 'New Application',
+            text: 'New Consultation',
             href: '/new',
         },
         {
             type: 'link',
-            text: 'All Applications',
+            text: 'Todays Consultations',
             href: '/conversations',
         },
         { type: 'divider' },
@@ -47,14 +52,19 @@ export default function SideNav({ activeHref }: SideNavProps) {
         { type: 'divider' },
         {
             type: 'link',
-            text: 'Amazon Transcribe',
-            href: 'https://aws.amazon.com/transcribe',
+            text: 'Architecture diagram',
+            href: '/architecture'
+        },
+        {
+            type: 'link',
+            text: 'AWS HealthScribe',
+            href: 'https://aws.amazon.com/healthscribe',
             external: true,
         },
         {
             type: 'link',
-            text: 'Amazon Comprehend',
-            href: 'https://aws.amazon.com/comprehend',
+            text: 'AWS for Health',
+            href: 'https://aws.amazon.com/health',
             external: true,
         },
         {
@@ -68,7 +78,7 @@ export default function SideNav({ activeHref }: SideNavProps) {
     return (
         <SideNavigation
             activeHref={activeHref}
-            header={{ text: 'AWS Conversación Agente Demo', href: '/' }}
+            header={{ text: 'AWS Demo EPR', href: '/' }}
             items={sideNavItems}
             onFollow={(e) => {
                 e.preventDefault();
