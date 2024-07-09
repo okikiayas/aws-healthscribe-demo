@@ -91,14 +91,14 @@ export default function NewConversation() {
     }
 
     /**
-     * @description Submit the form to create a new HealthScribe job
+     * @description Submit the form to create a new job
      */
     async function submitJob(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         setIsSubmitting(true);
         setFormError('');
 
-        // build job params with StartMedicalScribeJob request syntax
+        // build job params with StartTranscribeJob request syntax
         const audioParams =
             audioSelection === 'speakerPartitioning'
                 ? {
@@ -225,7 +225,7 @@ export default function NewConversation() {
         <ContentLayout
             header={
                 <Header
-                    description="Upload your audio file to be processed by AWS HealthScribe"
+                    description="Upload your audio file to be processed by AWS Conversación Agente"
                     variant="awsui-h1-sticky"
                 >
                     New Conversation
@@ -236,7 +236,7 @@ export default function NewConversation() {
                 header={
                     <Header
                         variant="h3"
-                        description="Note: AWS HealthScribe offers additional features not built into this demo, such as Custom Vocabulary, Content Removal, and more. This is available via the AWS console, API, or SDK."
+                        description="Note: AWS Conversación Agente uses Amazon Transcribe and Amazon Bedrock.   "
                     />
                 }
             >
@@ -280,7 +280,7 @@ export default function NewConversation() {
                                         >
                                             <Popover
                                                 header="Live Recording"
-                                                content="The audio file will be submitted to AWS HealthScribe after the recording is complete. Please position your device or microphone so it can capture all conversation participants."
+                                                content="The audio file will be submitted to Amazon Transcribe after the recording is complete. Please position your device or microphone so it can capture all conversation participants."
                                             >
                                                 <StatusIndicator type="info">New</StatusIndicator>
                                             </Popover>
