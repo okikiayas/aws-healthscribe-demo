@@ -140,7 +140,7 @@ export default function TopNav() {
             <TopNavigation
                 identity={{
                     href: '/',
-                    title: 'AWS Conversación Agente',
+                    title: 'AWS Summit Clinic',
                     logo: {          
                         src: "/logo.png",          
                         alt: "Service"        
