@@ -198,8 +198,8 @@ export default function NewConversation() {
                     id: `New HealthScribe Job: ${jobName}`,
                     type: 'info',
                     value: 100,
-                    description: 'Unable to confirm HealthScribe job submission',
-                    additionalInfo: `Response from HealthScribe: ${JSON.stringify(startJob)}`,
+                    description: 'Unable to confirm Transcribe job submission',
+                    additionalInfo: `Response from Transcribe: ${JSON.stringify(startJob)}`,
                 });
             }
         } catch (e) {
@@ -207,8 +207,8 @@ export default function NewConversation() {
                 id: `New HealthScribe Job: ${jobName}`,
                 type: 'error',
                 value: 0,
-                description: 'Submitting job to HealthScribe failed',
-                additionalInfo: `Error submitting job to HealthScribe: ${(e as Error).message}`,
+                description: 'Submitting job to Transcribe failed',
+                additionalInfo: `Error submitting job to Transcribe: ${(e as Error).message}`,
             });
             setIsSubmitting(false);
             throw e;
