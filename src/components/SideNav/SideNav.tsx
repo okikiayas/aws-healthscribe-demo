@@ -40,14 +40,14 @@ export default function SideNav({ activeHref }: SideNavProps) {
         { type: 'divider' },
         {
             type: 'link',
-            text: 'AWS HealthScribe',
-            href: 'https://aws.amazon.com/healthscribe',
+            text: 'AWS Transcribe',
+            href: 'https://aws.amazon.com/transcribe',
             external: true,
         },
         {
             type: 'link',
-            text: 'AWS for Health',
-            href: 'https://aws.amazon.com/health',
+            text: 'Amazon Bedrock',
+            href: 'https://aws.amazon.com/bedrock',
             external: true,
         },
         {
@@ -61,7 +61,7 @@ export default function SideNav({ activeHref }: SideNavProps) {
     return (
         <SideNavigation
             activeHref={activeHref}
-            header={{ text: 'AWS HealthScribe', href: '/' }}
+            header={{ text: 'AWS Conversación Agente', href: '/' }}
             items={sideNavItems}
             onFollow={(e) => {
                 e.preventDefault();
