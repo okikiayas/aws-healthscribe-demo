@@ -22,7 +22,7 @@ function Welcome() {
         if (user) {
             return (
                 <TextContent>
-                    <p>This sample ReactJS-based web app shows the art of the possible in using Amazon Transcribe, Amazon Bedrock and Amazon Comprehend .</p>
+                    <p>This sample ReactJS-based web app shows the art of the possible in using Amazon Transcribe and Amazon Bedrock  .</p>
                     <p>
                          AWS Conversación Agente is an AI-powered tool that empowers BBVA's field agents 
                          to automatically generate comprehensive customer profiles by seamlessly transcribing,
@@ -37,14 +37,13 @@ function Welcome() {
                         </li>
                         <ul>
                             <li>Summarized client information</li>
-                            <li>Rich consultation transcripts</li>
+                            <li>Detailed transcripts</li>
                             <li>Transcript segmentation</li>
                             <li>Automated data capture</li>
-                            <li>Structured medical terms</li>
                         </ul>
                         <li>
                             <Link onFollow={() => navigate('/new')}>
-                                Submit your own audio file to AWS HealthScribe.
+                                Submit your own audio file to AWS Conversación Agente.
                             </Link>
                         </li>
                         <li>
