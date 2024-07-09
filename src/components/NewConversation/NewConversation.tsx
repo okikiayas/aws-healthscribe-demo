@@ -117,9 +117,9 @@ export default function NewConversation() {
                           {
                               ChannelId: 1,
                               ParticipantRole:
-                                  audioDetails.channelIdentification.channel1 === 'CLINICIAN'
-                                      ? 'PATIENT'
-                                      : ('CLINICIAN' as MedicalScribeParticipantRole),
+                                  audioDetails.channelIdentification.channel1 === 'AGENT'
+                                      ? 'APPLICANT'
+                                      : ('AGENT' as MedicalScribeParticipantRole),
                           },
                       ],
                       Settings: {
