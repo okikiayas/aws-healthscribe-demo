@@ -85,7 +85,7 @@ export default function Conversations() {
         setTableLoading(false);
     }, []);
 
-    // Property for <Pagination /> to enable ... on navigation if there are additional HealthScribe jobs
+    // Property for <Pagination /> to enable ... on navigation if there are additional Transcribe jobs
     const openEndPaginationProp = useMemo(() => {
         if (Object.keys(moreHealthScribeJobs).length > 0) {
             return { openEnd: true };
@@ -97,7 +97,7 @@ export default function Conversations() {
     // Table collection
     const { items, actions, collectionProps, paginationProps } = useCollection(healthScribeJobs, {
         filtering: {
-            empty: <TableEmptyState title="No HealthScribe jobs" subtitle="Try clearing the search filter." />,
+            empty: <TableEmptyState title="No Transcribe jobs" subtitle="Try clearing the search filter." />,
             noMatch: (
                 <TableEmptyState
                     title="No matches"
@@ -124,7 +124,7 @@ export default function Conversations() {
             }
             items={items}
             loading={tableLoading}
-            loadingText="Loading HealthScribe jobs"
+            loadingText="Loading Transcribe jobs"
             onSelectionChange={({ detail }) => setSelectedHealthScribeJob(detail.selectedItems)}
             pagination={
                 <Pagination
