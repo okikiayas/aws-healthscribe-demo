@@ -28,12 +28,6 @@ export default function SideNav({ activeHref }: SideNavProps) {
         { type: 'divider' },
         {
             type: 'link',
-            text: 'Generate Audio',
-            href: '/generate',
-        },
-        { type: 'divider' },
-        {
-            type: 'link',
             text: 'Settings',
             href: '/settings',
         },
