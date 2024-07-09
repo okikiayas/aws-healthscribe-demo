@@ -17,25 +17,13 @@ export default function SideNav({ activeHref }: SideNavProps) {
     const sideNavItems: SideNavigationProps.Item[] = [
         {
             type: 'link',
-            text: 'Patients',
-            href: 'https://d13qy380vrp732.cloudfront.net/patients',
-            external: true
-        },
-        // {
-        //     type: 'link',
-        //     text: 'Clinics',
-        //     href: '/clinics',
-        // },
-        { type: 'divider' },
-        {
-            type: 'link',
-            text: 'New Consultation',
-            href: '/new',
-        },
-        {
-            type: 'link',
-            text: 'Todays Consultations',
+            text: 'Conversations',
             href: '/conversations',
+        },
+        {
+            type: 'link',
+            text: 'New Conversation',
+            href: '/new',
         },
         { type: 'divider' },
         {
@@ -50,11 +38,6 @@ export default function SideNav({ activeHref }: SideNavProps) {
             href: '/settings',
         },
         { type: 'divider' },
-        {
-            type: 'link',
-            text: 'Architecture diagram',
-            href: '/architecture'
-        },
         {
             type: 'link',
             text: 'AWS HealthScribe',
@@ -78,7 +61,7 @@ export default function SideNav({ activeHref }: SideNavProps) {
     return (
         <SideNavigation
             activeHref={activeHref}
-            header={{ text: 'AWS Demo EPR', href: '/' }}
+            header={{ text: 'AWS HealthScribe', href: '/' }}
             items={sideNavItems}
             onFollow={(e) => {
                 e.preventDefault();
