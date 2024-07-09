@@ -15,15 +15,22 @@ export default function SideNav({ activeHref }: SideNavProps) {
     const navigate = useNavigate();
 
     const sideNavItems: SideNavigationProps.Item[] = [
+        // {
+        //     type: 'link',
+        //     text: 'Patients',
+        //     href: 'https://d13qy380vrp732.cloudfront.net/patients',
+        //     external: true
+        // },
+        { type: 'divider' },
         {
             type: 'link',
-            text: 'Conversations',
-            href: '/conversations',
+            text: 'New Application',
+            href: '/new',
         },
         {
             type: 'link',
-            text: 'New Conversation',
-            href: '/new',
+            text: 'All Applications',
+            href: '/conversations',
         },
         { type: 'divider' },
         {
@@ -40,14 +47,14 @@ export default function SideNav({ activeHref }: SideNavProps) {
         { type: 'divider' },
         {
             type: 'link',
-            text: 'AWS HealthScribe',
-            href: 'https://aws.amazon.com/healthscribe',
+            text: 'Amazon Transcribe',
+            href: 'https://aws.amazon.com/transcribe',
             external: true,
         },
         {
             type: 'link',
-            text: 'AWS for Health',
-            href: 'https://aws.amazon.com/health',
+            text: 'Amazon Comprehend',
+            href: 'https://aws.amazon.com/comprehend',
             external: true,
         },
         {
@@ -61,7 +68,7 @@ export default function SideNav({ activeHref }: SideNavProps) {
     return (
         <SideNavigation
             activeHref={activeHref}
-            header={{ text: 'AWS HealthScribe', href: '/' }}
+            header={{ text: 'AWS Conversación Agente Demo', href: '/' }}
             items={sideNavItems}
             onFollow={(e) => {
                 e.preventDefault();
