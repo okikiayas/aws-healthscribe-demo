@@ -16,51 +16,36 @@ import { useAuthContext } from '@/store/auth';
 
 function Welcome() {
     const navigate = useNavigate();
-    const { isUserAuthenticated } = useAuthContext();
+    const { user } = useAuthContext();
 
     function Content() {
-        if (isUserAuthenticated) {
+        if (user) {
             return (
                 <TextContent>
-                    <p>This sample ReactJS-based web app shows the art of the possible in using AWS HealthScribe.</p>
+                    <p>This sample ReactJS-based web app shows the art of the possible in using Amazon Transcribe, Amazon Bedrock and Amazon Comprehend .</p>
                     <p>
-                        AWS HealthScribe is a HIPAA-eligible service empowering healthcare software vendors to build
-                        clinical applications that automatically generate clinical notes by analyzing patient-clinician
-                        conversations.
+                         AWS Conversación Agente is an AI-powered tool that empowers BBVA's field agents 
+                         to automatically generate comprehensive customer profiles by seamlessly transcribing,
+                         translating, and capturing data during agent-client conversations, freeing the agents 
+                         to focus on understanding unique client needs and cultivating strong rapport.
                     </p>
                     <p>Currently this demo allows you to:</p>
                     <ul>
                         <li>
-                            <Link onFollow={() => navigate('/conversations')}>View HealthScribe results</Link>,
+                            <Link onFollow={() => navigate('/conversations')}>View AWS Conversación Agente results</Link>,
                             including:
                         </li>
                         <ul>
-                            <li>Summarized clinical notes</li>
+                            <li>Summarized client information</li>
                             <li>Rich consultation transcripts</li>
                             <li>Transcript segmentation</li>
-                            <li>Evidence mapping</li>
+                            <li>Automated data capture</li>
                             <li>Structured medical terms</li>
                         </ul>
                         <li>
-                            Integrate HealthScribe output with{' '}
-                            <Link external href="https://aws.amazon.com/comprehend/medical/">
-                                Amazon Comprehend Medical
+                            <Link onFollow={() => navigate('/new')}>
+                                Submit your own audio file to AWS HealthScribe.
                             </Link>
-                            , allowing you to:
-                            <ul>
-                                <li>
-                                    Infer medical ontologies (RxNorm, ICD-10-CM, and SNOMED CT) from the HealthScribe
-                                    trancript
-                                </li>
-                                <li>
-                                    Detect medical terminologies and infer medical ontologies from the HealthScribe
-                                    insights output
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <Link onFollow={() => navigate('/new')}>Submit or record your own audio file</Link> to AWS
-                            HealthScribe.
                         </li>
                         <li>
                             <Link onFollow={() => navigate('/generate')}>Generate a multi-speaker audio file</Link>{' '}
@@ -101,7 +86,7 @@ function Welcome() {
     }
 
     return (
-        <ContentLayout header={<Header variant="h2">Demo Application Experience powered by AWS HealthScribe</Header>}>
+        <ContentLayout header={<Header variant="h2">Demo Application Experience powered by AWS </Header>}>
             <Container footer={<Footer />}>
                 <Content />
             </Container>
