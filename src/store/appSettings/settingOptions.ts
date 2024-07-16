@@ -12,8 +12,8 @@ export const appSettingOptions: AppSettingsOptions = {
         { label: 'Off', value: 'off' },
         { label: 'On', value: 'on' },
     ],
-    //'app.comprehendMedicalEnabled': [
-        //{ label: 'Enabled', value: 'enabled' },
-        //{ label: 'Disabled', value: 'disabled' },
-    //],
+    'app.comprehendMedicalEnabled': [
+        { label: 'Enabled', value: 'enabled' },
+        { label: 'Disabled', value: 'disabled' },
+    ],
 };
