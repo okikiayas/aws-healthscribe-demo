@@ -3,7 +3,7 @@
 import { AppSettings } from './appSettings.type';
 
 export const DEFAULT_SETTINGS: AppSettings = {
-    'app.region': { label: 'US East (N. Virginia)', value: 'us-east-1' },
+    'app.region': { label: 'EU Central (Frankfurt)', value: 'eu-central-1'},
     'app.apiTiming': { label: 'Off', value: 'off' },
     'app.comprehendMedicalEnabled': { label: 'Enabled', value: 'enabled' },
 };
