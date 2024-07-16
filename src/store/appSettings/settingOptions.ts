@@ -11,7 +11,7 @@ export const appSettingOptions: AppSettingsOptions = {
     'app.apiTiming': [
         { label: 'Off', value: 'off' },
         { label: 'On', value: 'on' },
-    //],
+    ],
     //'app.comprehendMedicalEnabled': [
         //{ label: 'Enabled', value: 'enabled' },
         //{ label: 'Disabled', value: 'disabled' },
