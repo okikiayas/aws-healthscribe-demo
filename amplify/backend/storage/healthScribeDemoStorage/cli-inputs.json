@@ -1,7 +1,7 @@
 {
-    "resourceName": "healthScribeDemoStorage",
+    "resourceName": "aws-conversation-agent-data-frankfurt",
     "policyUUID": "b7ee1e0f",
-    "bucketName": "healthscribe-demo-storage",
+    "bucketName": "aws-conversation-agent-data-frankfurt",
     "storageAccess": "auth",
     "guestAccess": [],
     "authAccess": ["CREATE_AND_UPDATE", "READ", "DELETE"],
